@@ -60,7 +60,7 @@
 	ext: 'png'
     }).addTo(map);
 
-    states = L.geoJson.ajax("/Assets/map.geojson", {
+    states = L.geoJson.ajax("Assets/map.geojson", {
         attribution: 'Data: US Department of Labor, Map: Olivia Burke',
         pointToLayer: function (feature, x){
             return L.circleMarker(x, {
