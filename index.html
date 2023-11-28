@@ -62,14 +62,14 @@
 
     states = L.geoJson.ajax("Assets/map.geojson", {
         attribution: 'Data: US Department of Labor, Map: Olivia Burke',
-        pointToLayer: function (feature, x){
+        pointToLayer: function (Feature, x){
             return L.circleMarker(x, {
                 color: '#0ecd3bcc',
                 opacity: 1,
                 weight: 2,
                 fillColor: '#0ecd3bcc',
                 fillOpacity: .6,
-                radius: calcRadius(Feature.properties.estimate)
+                radius: calcRadius(Feature.properties.wages)
             }).on({
                 mouseover: function(e){
                     this.setStyle({color: 'red',fillColor: 'red'});
